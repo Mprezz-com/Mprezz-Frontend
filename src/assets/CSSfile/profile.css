@@ -1,0 +1,21 @@
+.pictureprofile{
+    margin-left: 29%;
+    width: 150px;
+    margin-bottom: 2%;
+}
+
+@media screen and (min-width: 760px) and (max-width: 991px) {
+
+    .pictureprofile{
+        margin-left: 39%;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .pictureprofile{
+        margin-left: 35%;
+    }
+
+}

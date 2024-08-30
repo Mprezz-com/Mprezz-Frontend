@@ -1,0 +1,54 @@
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  gap: 25px;
+  align-items: center;
+  margin-top: 5%;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.formrow {
+  display: flex;
+  margin-bottom: 15px;
+  /* gap: */
+}
+
+.formrow label {
+  display: block;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.formrow input {
+  flex: 1;
+  padding: 2%;
+  border-radius: 10px;
+}  
+
+.coursedetail{
+  border: 1px solid #304DB5;
+  padding: 4%;
+  border-radius: 20px;
+  padding-top: 2%;
+  margin-left:1%;
+  width: 40%;
+}
+
+.coursedetail h2{
+  margin-bottom: 5%;
+}
+
+.design-c{
+  border-radius: 0% 0% 100% 0% ;
+  background-color: #304DB5;
+  padding: 6%;
+  width: 10%;position: fixed;
+  left: 0;
+  top: 0;
+}

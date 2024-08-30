@@ -1,0 +1,443 @@
+
+.fullpage{
+    padding-top: 4.1%;
+    
+}
+
+.titlebox{
+    background-color: #304DB5;
+    width: 100%;
+    min-width: 650px;
+}
+
+.titlebox1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4%;
+    padding: 2%;
+    width: 90%;
+}
+
+.companypic{
+    width:22%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    }
+
+.companypic1{
+    width: 80%;
+    margin-top:6%;
+}
+
+.titright{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    padding-right: 2%;
+    padding: 1%;
+    width: 70%;
+}
+
+.titname{
+    font-size:40px;
+    font-weight:bold;
+    color:white;
+}
+
+.ctop{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 2%;
+    color: aliceblue;
+    width: 100%;
+    font-size: 16px;
+}
+
+.inctop{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.pricebox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    width: 35%;
+    height: 100%;
+    /* margin-top: 4%; */
+    /* margin-bottom: 4%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.pricers{
+    font-size:24px;
+    margin: 0 auto;
+}
+
+
+.pricebox1{
+    border: 1px solid;
+    color: white;
+    background-color: #304DB5;
+    padding: 4%;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pricebox1:hover{
+    background-color: #516bc8;
+}
+
+.rating img{
+    width: 20px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.rating{
+    gap: 0.5rem;
+    display: flex;
+
+}
+
+.rating div{
+    /* gap: 0.5rem; */
+    display: flex;
+    /* justify-content: center */
+    flex-direction: row;
+
+}
+
+
+
+.below{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* margin-left: 6%; */
+}
+    
+.cleft{
+    margin-top: 3%;
+    width: 29%;
+    height: max-content;
+}
+
+.include{
+    border: 1px solid;
+    padding: 5%;
+    width: 100%;
+    margin-top: 10%;
+    border-radius: 15px;
+    height: 30%;
+}
+
+.include ul{
+    font-size: 19px;
+    padding-left: 9%;
+}
+
+.include h2{
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.cright{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.learn ul{
+    padding-left: 4%;
+    font-size: 18px;
+}
+
+.learn h2{
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.desc{
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.desc ul{
+    padding-left: 4%;
+    font-size: 18px;
+}
+
+.desc h2{
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.studTitle{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration:underline;
+}
+
+.studContainer{
+    margin: 20px ;
+    margin-bottom: 50px;
+}
+
+.zeroData{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.studCard{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 1%;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.studCardComp{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1400px){
+    .below{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 1%;
+        padding-left: 10%;
+    }
+
+    .cleft{
+        margin-top: 2%;
+        width: 46%;
+    }
+
+    .companypic{
+        width:30%;
+        padding-top: 3%;
+        padding-bottom: 1%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .companypic1{
+        margin-top: 4%;
+        width: 80%;
+        margin-bottom: 5%;
+    }
+    .include{
+        border: 1px solid;
+        padding: 5%;
+        width: 100%;
+        border-radius: 15px;
+        height: 30%;
+    }
+}
+
+@media only screen and (max-width: 980px){
+
+    .titlebox1{
+        display: flex;
+        flex-direction: row;
+        margin-left: 4%;
+        /* padding: 2%; */
+        padding-top: 5%;
+        width: 90%;
+    }
+
+    .titname{
+        font-size:26px;
+        font-weight:bold;
+        color:white;
+    }
+
+    .pricebox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: white;
+        width: 40%;
+        height: 70%;
+        padding-top:5%;
+        margin-top: 2%;
+        font-size: 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px black;
+    }
+    
+    .pricers{
+        font-size:24px;
+        margin: 0 auto;
+    }
+    
+    
+    .pricebox1{
+        border: 1px solid;
+        color: white;
+        background-color: #304DB5;
+        padding: 4%;
+        width: 40%;
+        border-radius: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+       
+}
+
+@media only screen and (max-width: 720px){
+
+    .titlebox{
+        display: flex;
+        flex-direction: column;
+        background-color: #304DB5;
+        margin-top: 7%;
+        margin-left: 0px;
+        width: 100%;
+        min-width: 790px;
+    }
+
+    .rating{
+        gap: 0.5rem;
+        display: flex;
+        /* justify-content: center */
+    
+    }
+
+    .titlebox1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 8%;
+        /* width: 100%; */
+    }
+
+    .companypic{
+        width: 30%;
+        margin-top: -180px;
+    }
+
+    .companypic1{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .titright{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        width:100%;
+        margin-bottom: 10%;
+    }
+    
+    .ctop{
+        color: aliceblue;
+        font-size: 16px;
+        /* text-align: center; */
+        margin-left: 10%;
+
+    }
+
+
+    .inctop{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .titname{
+        font-size:30px;
+        font-weight:bold;
+        color:white;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .pricebox{
+        display: flex;
+        background-color: white;
+        margin-top: 5%;
+        width: 80%;
+        padding:3%;
+        font-size: 100%;
+        border-radius: 10px;
+        box-shadow: none;
+        flex-direction: row;
+    }
+    
+    .pricers{
+        font-size: 24px;
+        margin-top: 5%;
+        font-weight: bold;
+        margin-bottom:10px;
+    }
+    
+    .pricebox1{
+        border: 1px solid;
+        color: white;
+        background-color: #304DB5;
+        padding: 3.5%;
+        width: 60%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .below{
+        display: flex;
+        /* margin: 0 auto; */
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    .below li{
+        font-size: 18px;
+        width: 600px;
+    }
+
+    .cleft{
+        margin-top: 3%;
+        width: 600px;
+    }
+    
+    .cright{
+        width: 100%;
+    }
+
+    .include{
+        border: 1px solid;
+        padding: 5%;
+        width: 100%;
+        border-radius: 15px;
+        height: 30%;
+    }
+}

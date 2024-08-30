@@ -1,0 +1,88 @@
+.irfullpage{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.irleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5%;
+    /* justify-content: center; */
+    height: 100vh;
+}
+
+.irright{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5%;
+    /* justify-content: center; */
+    background-color:  #566fd6;
+    height: 100vh;
+
+}
+
+.irbtn{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px;
+    margin-top: 5%;
+    width: 20%;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+
+.irbtn h1{
+    font-weight: bold;
+}
+
+.irwelcome{
+    width: 77%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.irwelcome p{
+    text-align: center;
+}
+
+.irh1{
+    font-weight: bold;
+    font-size: 28px;
+    color: #5375f0;
+}
+
+.irh2{
+    font-weight: bold;
+    font-size: 28px;
+    color: aliceblue;
+}
+
+@media only screen and (max-width:756px){
+    .irfullpage{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .irleft{
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .irright{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+}

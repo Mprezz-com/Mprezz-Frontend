@@ -1,0 +1,128 @@
+.courseForm-design{
+    border-radius: 0% 0% 100% 0% ;
+    background-color: #304DB5;
+    width: 14%;
+    height: 19vh;
+    /* margin-top: 5% ; */
+    position: relative;
+    left: 0px;
+    top: 50px;
+  }
+  
+  .courseForm-heading{
+    position: relative;
+    top:-100px;
+    left: 350px;
+  }
+  
+   .courseForm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    margin: auto;
+    /* margin-top: 5% ; */
+    margin-bottom: 5%;
+    /* padding-top:30px; */
+  }
+  
+  .courseForm-pageHead{
+    position: relative;
+    text-align: left;
+    /* width: 800px;  */
+    top:15px;
+    /* left:-200px; */
+    background-color: white;
+    padding: 0px 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 5%;
+    padding-top: 25px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  .courseForm-fields{
+    font-size: 25px;
+    color: #304DB5;
+  }  
+  .courseForm-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .courseForm-listData{
+    display: flex;
+    flex-direction: column;
+  }
+  .courseForm-listData span{
+    width: 10px;
+    align-self: flex-end;
+  }
+  
+  .courseForm-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .courseForm-label span {
+    margin-bottom: 10px;
+  }
+  
+  .courseForm-input, .courseForm-select, .courseForm-textarea {
+    padding: 1%;
+    border: 1px solid #7b7777;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .courseForm-textarea {
+    width: 100%;
+  }
+  
+  .courseForm-radio-btn{
+    margin-right: 20px;
+  }
+  
+  .courseForm-button {
+    /* padding: 10px 20px; */
+    border: none;
+    background-color: #304DB5;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  .courseForm-button.add-more {
+    background-color: transparent;
+    color: #841584;
+    /* margin-top: 10px; */
+    align-self: flex-start;
+    cursor: pointer;
+  }
+  
+  
+  @media screen and (max-width: 770px){
+  .courseForm-design{
+      display: none;
+  }
+  .courseForm-pageHead{
+      font-size: 20px;
+  }
+  .courseForm-container {
+    /* background-color: blue; */
+    /* padding: 10%; */
+    margin: 18% 15% 2% 15%;
+    width: 70vw;
+    /* margin-top: 200px; */
+  }
+  .courseForm-fields{
+    font-size: 15px;
+  }
+  }
