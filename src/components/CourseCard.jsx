@@ -9,7 +9,11 @@ const CourseCard = ({data,redirect})=>{
         <div className={maincss1.card}>
             <div className={maincss1.card1}>
               <div className={maincss1.fields}>
-                <span className={maincss1.topicName} style={{ fontWeight: 'bold' }}>{data.course_name}</span>
+                <span className={maincss1.topicName} style={{ fontWeight: 'bold', cursor:'pointer' }}  onClick={()=>{(redirect!=0)?nav(`/course/${data.id}`):nav(`/courseCenter/${data.id}`)}}>
+                  {/* <a href={(redirect!=0)?nav(`/course/${data.id}`):nav(`/courseCenter/${data.id}`)} > */}
+                  {data.course_name}
+                   {/* </a>  */}
+                </span>
                 <div style={{ marginTop: '5%' }}>
                   <span>Mode</span><span>:</span><span>{data.mode}</span>
                 </div>

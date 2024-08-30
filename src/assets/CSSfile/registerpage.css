@@ -47,18 +47,6 @@
   min-width: 60px;
 } 
 
-.form-row select {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid rgb(24,73,154);
-  border-radius: 10px;
-  min-width: 60px;
-}
-
-.form-row .css-13cymwt-control {
-border-width: 0px;
-}
-
 .personaldetails{
   box-shadow: 0 3px 8px 1px;
   border-radius: 20px;
@@ -251,3 +239,4 @@ width: 60%;
 
 
 }
+

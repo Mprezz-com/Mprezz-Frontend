@@ -1,74 +1,64 @@
-.gradient-custom-2 {
-    /* fallback for old browsers */
-    background: #fccb90;
-  
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: -webkit-linear-gradient(to right, rgb(24,73,154), rgb(24,73,154), rgb(54, 106, 189),  rgba(0,152,244,1)); */
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* background: linear-gradient(to right, rgb(24,73,154), rgb(24,73,154), rgb(54, 106, 189),  rgba(0,152,244,1)); */
-       /* Chrome 10-25, Safari 5.1-6 */
-       background: -webkit-linear-gradient(110deg, rgba(24,73,154,1) 54%, rgba(0,152,244,1) 96%);
-  
-  
-       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-       background: linear-gradient(110deg, rgba(24,73,154,1) 54%, rgba(0,152,244,1) 96%);
+.logingradient-custom-2 {
+  background: #fccb90;
+  background: -webkit-linear-gradient(110deg, rgba(24,73,154,1) 54%, rgba(0,152,244,1) 96%);
+  background: linear-gradient(110deg, rgba(24,73,154,1) 54%, rgba(0,152,244,1) 96%);
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  height: 100%;
+}
+
+.logingradient-form {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.logincustom-input {
+  height: 50px;
+  width: 80%;
+  padding-top: 9px;
+}
+
+.logincustom-btn {
+  height: 60px;
+  min-height: 65px;
+}
+
+.loginlogo-container img {
+  max-width: 100%;
+  /* height: auto; */
+  width: 170px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+  .logingradient-form {
+    height: auto;
   }
 
-  a:hover{
-    color: inherit;
-  }
-  .wh-100{
-    width: 100vw;
-  }
-
-  .vh-100 {
-    height: 100vh !important;
-  }
-  
-  .full-height {
-    height: 100%;
+  .logincustom-input {
     width: 100%;
   }
-  
-  .custom-input {
-    height: 50px;
-    width: 80%;
-    padding-top: 9px;
+}
+
+@media only screen and (max-width: 750px) {
+  .d-none.d-md-flex {
+    display: none !important;
   }
   
-  .custom-btn {
-    height: 60px;
+}
+
+@media (min-width: 768px) {
+  .logingradient-form {
+    height: 100vh !important;
   }
-  
-  @media (min-width: 768px) {
-    .gradient-form {
-      height: 100vh !important;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .gradient-custom-2 {
-      border-top-right-radius: .3rem;
-      border-bottom-right-radius: .3rem;
-    }
-  }
-  
-  @media (max-width: 750px) {
-    .d-none.d-md-flex {
-      display: none !important;
-    }
-  
-    .custom-input {
-      width: 100%;
-    }
-  }
-  
-  .logo-container img {
-    width: 170px;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+}

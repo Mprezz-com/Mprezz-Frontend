@@ -63,6 +63,7 @@ function Mainpage() {
     setIsLoading(false)
     console.log(value);
     setData(value['Data'])
+    
   }
 
   useEffect(
@@ -175,6 +176,7 @@ function Mainpage() {
                     value={course}
                     label="Courses"
                     onChange={handleChangeCourse}
+                    // sx={{ manWidth: "80px", height: 60 }} 
                   >
                     <MenuItem value="" >
                       <em>None</em>
@@ -196,6 +198,13 @@ function Mainpage() {
                     value={price}
                     label="Price"
                     onChange={handleChangePrice}
+                    // MenuProps={{
+                    //   PaperProps: {
+                    //     style: {
+                    //       width: 100, // Set the minimum width of the dropdown menu
+                    //     },
+                    //   },
+                    // }}
                   >
                     <MenuItem value="">
                       <em>None</em>

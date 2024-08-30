@@ -11,7 +11,6 @@
     align-items: center;
     gap: 2rem;
     padding-top: 5%;
-    /* justify-content: center; */
     height: 100vh;
 }
 
@@ -22,7 +21,6 @@
     align-items: center;
     gap: 2rem;
     padding-top: 5%;
-    /* justify-content: center; */
     background-color:  #566fd6;
     height: 100vh;
 
@@ -45,7 +43,7 @@
 
 .irwelcome{
     width: 77%;
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
@@ -63,6 +61,10 @@
     font-weight: bold;
     font-size: 28px;
     color: aliceblue;
+}
+
+.interreghead{
+    display: none;
 }
 
 @media only screen and (max-width:756px){
@@ -84,5 +86,12 @@
         width: 100%;
         height: auto;
         padding-bottom: 50px;
+        margin-top: 0px;
+    }
+
+    .interreghead{
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }

@@ -16,7 +16,6 @@ h2 {
 .formrow {
   display: flex;
   margin-bottom: 15px;
-  /* gap: */
 }
 
 .formrow label {

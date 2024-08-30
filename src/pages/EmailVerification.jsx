@@ -56,8 +56,8 @@ function EmailVerification() {
   };
 
   return (
+    <div className='h-96'>
     <div className='vtemp'>
-
       <div className='vtemp1'>
 
         <div className='vtemp2'>
@@ -74,6 +74,7 @@ function EmailVerification() {
 
       </div>
 
+    </div>
     </div>
   )
 }

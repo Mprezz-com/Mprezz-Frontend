@@ -38,6 +38,10 @@
   flex-direction: column;
   gap: 16px;
 }
+/* 
+#root > div._whole_1dkzj_1 > div._left_1dkzj_43 > div > div > div > div:nth-child(1) > div {
+  width: 80px;
+} */
 
 #dropdown {
   font-size: 16px;
@@ -161,8 +165,8 @@ MenuItem {
   padding: 5%;
   font-weight: bold;
 }
-
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) */
+@media only screen and (max-width: 1138px) {
   .whole {
     flex-direction: column;
     gap: 5%;
@@ -205,7 +209,8 @@ MenuItem {
     justify-content: center;
     align-items: center;
     border: 0;
-    /* filter: drop-shadow(0px 0px 0px 0px black); */
+
+    /* filter: drop-shadow(0px 0px 0px rgb(243, 242, 242)); */
   }
   .FilterName {
     display: none;
@@ -227,11 +232,9 @@ MenuItem {
 
   .right
   {
-    /* margin-top: 75px; */
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 15px;
     width: 100%;
     padding-bottom: 2%;
@@ -260,8 +263,6 @@ MenuItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* min-width: 85%; */
-    /* width: 90%; */
   }
 
   .topicName {
@@ -294,45 +295,13 @@ MenuItem {
   margin-bottom: 20px;
 }
 
+
+
 }
 
-@media only screen and (max-width: 1310px) and (min-width: 750px) {
+/* @media only screen and (max-width: 1310px) and (min-width: 750px) */
+@media only screen and (max-width: 1310px) and (min-width: 1138px) {
   .st {
     filter: drop-shadow(15px 5px 4px black);
   }
 }
-
-/* @media only screen and (max-width : 749px) and (min-width : 550px) {
-  
-  .st {
-    position: relative;
-    top: 5%;
-    overflow-y: auto;
-    border: 1px solid;
-    padding: 1%;
-    border-radius: 0px 30px 0px 0px;
-    margin-top: 5%;
-    margin-left: 20%;
-    height: 50%;
-    background-color: white;
-    filter: drop-shadow(30px 10px 4px black);
-  }
-  .left {
-    max-width: 50%;
-    margin-bottom: 5%;
-    height: 100px;
-  }
-
-  .right
-  {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    padding-bottom: 2%;
-    margin: 2%;
-    margin-top: 120px;
-    margin-left: 3%;
-  }
-} */

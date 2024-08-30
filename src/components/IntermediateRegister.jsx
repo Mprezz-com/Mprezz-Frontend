@@ -7,7 +7,8 @@ function IntermediateRegister() {
 
   return (
     <>
-    <h1 style={{fontSize:40,fontWeight:'900',textAlign:'center',width:'100%'}}>How do you want to continue?</h1>
+    <div className='h-96'>
+    <h1 className='interreghead' style={{fontSize:30,fontWeight:'900',width:'100%'}}>How do you want to continue?</h1>
     <div className='irfullpage'>
         <div className='irleft'>
 
@@ -20,7 +21,7 @@ function IntermediateRegister() {
             </div>
 
             
-            <div className='irbtn' onClick={()=>{nav('/registerCourseCenter')}}>
+            <div className='irbtn' style={{cursor:'pointer'}} onClick={()=>{nav('/registerCourseCenter')}}>
                <h1>Course Provider</h1> 
             </div>
             
@@ -33,15 +34,17 @@ function IntermediateRegister() {
         {/* <h1 className='irh2'>Welcome to mprezz!</h1> */}
 
             <div className='irwelcome'>
-                <p>Choose 'Student' if you're ready to learn, grow, and achieve your educational goals and be the expert in your domain.</p>
+                <p style={{color:'white'}}>Choose 'Student' if you're ready to learn, grow, and achieve your educational goals and be the expert in your domain.</p>
             </div>
 
-            <div className='irbtn' onClick={()=>{nav('/register')}}>
+            <div className='irbtn' style={{cursor:'pointer'}} onClick={()=>{nav('/register')}}>
               <h1>Student</h1>  
             </div>
         </div>
 
     </div>
+    </div>
+
     </>
   )
 }

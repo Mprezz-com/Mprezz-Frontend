@@ -96,29 +96,29 @@ function Newlogin() {
   };
 
   return (
-    <MDBContainer fluid className="vh-100 wh-100 gradient-form d-flex justify-content-center">
-      <MDBRow className="w-100 pl-6">
+    <div className='h-96'>
+    <MDBContainer fluid className="logingradient-form flex-row align-items-center justify-content-center">
+      <MDBRow className="w-screen pl-6">
 
       <MDBCol md='1' className="d-flex flex-column align-items-center justify-content-center mb-5">
         </MDBCol>
 
         <MDBCol md='4' className="d-flex flex-column align-items-center justify-content-center mb-5">
-          <div className="text-center logo-container">
+          <div className="text-center loginlogo-container">
             <img src="src/assets/Images/logo.jpg" alt="logo" />
-            <h4 className="text-2xl font-bold mt-1 mb-5 pb-1">Welcome to Mprezz</h4>
+            <h4 className="text-2xl font-bold mt-1 mb-3 pb-1">Welcome to Mprezz</h4>
           </div>
-          <p>Start Your Journey here...</p>
-          <MDBInput wrapperClass='mb-4 custom-input' label='Email address' id='form1' type='email' value={email_id} onChange={(e) => setEmail(e.target.value)} />
-          <MDBInput wrapperClass='mb-4 custom-input' label='Password' id='form2' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          <MDBInput wrapperClass='mb-3 logincustom-input' label='Email address' id='form1' type='email' value={email_id} onChange={(e) => setEmail(e.target.value)} />
+          <MDBInput wrapperClass='mb-3 logincustom-input' label='Password' id='form2' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           
-          <select className="form-select mb-4 custom-input" value={user_role} onChange={(e) => setUserType(e.target.value)}>
+          <select className="form-select mb-4 logincustom-input" value={user_role} onChange={(e) => setUserType(e.target.value)}>
             <option value="Student">Student</option>
             <option value="CourseProvider">CourseProvider</option>
           </select>
 
           <div className="text-center pt-1 mb-5 pb-1">
             {
-              (!isLoading)?<MDBBtn className="mb-4 w-100 gradient-custom-2 custom-btn" onClick={handleLogin}>Sign in</MDBBtn>:
+              (!isLoading)?<MDBBtn className="mb-4 w-full logingradient-custom-2 logincustom-btn" onClick={handleLogin}>Sign in</MDBBtn>:
               <div>
                 <Shimmer height={65} width={200}>
                 </Shimmer>
@@ -129,23 +129,23 @@ function Newlogin() {
             <a className="text-muted" href="#!" onClick={handleForgotPassword}>Forgot password?</a>
           </div>
           <ToastContainer />
-          <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
-            <p className="mb-0">Don't have an account?</p>
-            <MDBBtn outline className='mx-2' color='danger'><a href="IntermediateRegister">Register</a></MDBBtn>
+          <div className="d-flex flex-col gap-2 align-items-center justify-content-center lg:flex-row align-middle">
+            <p>Don't have an account?</p>
+            <MDBBtn outline className='mx-2' color='danger' onClick={()=> nav('/IntermediateRegister')}>Register</MDBBtn>
           </div>
         </MDBCol>
 
         <MDBCol md='1' className="d-flex flex-column align-items-center justify-content-center mb-5">
         </MDBCol>
 
-        <MDBCol md='6' className="gradient-custom-2 d-flex flex-column justify-content-center h-lvh d-none d-md-flex">
-          <div className="text-white px-1 py-4 p-md-5 mx-md-4">
-            {/* <h4 className="mb-4 d-flex flex-column align-items-center">Welcome to Mprezz...</h4> */}
+        <MDBCol  className="logingradient-custom-2 flex flex-column justify-content-center h-screen d-none d-md-flex w-screen">
+          <div className="text-white px-1 py-4 p-md-5 mx-md-2">
             <img src="src/assets/Images/loginimage.png" alt="hi" />
           </div>
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </div>
   );
 }
 

@@ -1,0 +1,40 @@
+.nwh-container{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-bottom: 2px solid silver;
+}
+
+.nwh-tab-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nwh-tab{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 15px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.nwh-tab-select{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom:3px solid blue ;
+}
+
+
+/* .nwh-tab:hover{
+        background-color: rgb(68, 68, 255);
+        opacity: 50%;
+        color: white;
+} */

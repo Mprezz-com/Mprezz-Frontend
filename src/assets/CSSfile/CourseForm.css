@@ -3,7 +3,6 @@
     background-color: #304DB5;
     width: 14%;
     height: 19vh;
-    /* margin-top: 5% ; */
     position: relative;
     left: 0px;
     top: 50px;
@@ -21,17 +20,13 @@
     align-items: center;
     width: 60vw;
     margin: auto;
-    /* margin-top: 5% ; */
     margin-bottom: 5%;
-    /* padding-top:30px; */
   }
   
   .courseForm-pageHead{
     position: relative;
     text-align: left;
-    /* width: 800px;  */
     top:15px;
-    /* left:-200px; */
     background-color: white;
     padding: 0px 10px;
   }
@@ -90,7 +85,6 @@
   }
   
   .courseForm-button {
-    /* padding: 10px 20px; */
     border: none;
     background-color: #304DB5;
     color: white;
@@ -102,7 +96,6 @@
   .courseForm-button.add-more {
     background-color: transparent;
     color: #841584;
-    /* margin-top: 10px; */
     align-self: flex-start;
     cursor: pointer;
   }
@@ -116,11 +109,8 @@
       font-size: 20px;
   }
   .courseForm-container {
-    /* background-color: blue; */
-    /* padding: 10%; */
     margin: 18% 15% 2% 15%;
     width: 70vw;
-    /* margin-top: 200px; */
   }
   .courseForm-fields{
     font-size: 15px;

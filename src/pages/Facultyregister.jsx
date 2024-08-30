@@ -11,7 +11,7 @@ import {
 import "../assets/CSSfile/facultyregister.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { url } from '../assets/constants';
 function Facultyregister() {
   // State variables for each input field
   const [firstName, setFirstName] = useState('');
@@ -35,19 +35,44 @@ function Facultyregister() {
     // Add form validation and submission logic here
     event.preventDefault();
 
-    if (!firstName || !lastName || !email|| !qualification || !position || !institution || !place || !experience || !address || !pinCode || !district || !country || !code ||!phoneNumber ||!cvLink) {
+    if (!firstName || !lastName || !email || !qualification || !position || !institution || !place || !experience || !address || !pinCode || !district || !country || !code ||!phoneNumber ||!cvLink) {
       toast('All details are mandatory.');
       setTimeout(() => setErrorMessage(''), 5000);
       return;
     }
+    const res =  await fetch(`${url}faculties/faculty_register/`,{
+      method:"POST",
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(
+        {
+          "first_name": firstName,
+          "last_name": lastName,
+          "email_id": email,
+          "qualification":qualification,
+          "linkedIn_profile":additionalInfo,
+          "position":position,
+          "institution":institution,
+          "place":place,
+          "experience": experience,
+          "address": address,
+          "pin_code": pinCode,
+          "district": district,
+          "country":country,
+          "phone_number": phoneNumber,
+          "cv_link": cvLink
+        }
+      )
+    })
 
     toast("Successfully registered");
   };
 
   return (
-    <MDBContainer fluid className='h-custom'>
-      <MDBRow className='d-flex justify-content-center align-items-center h-100'>
-        <MDBCol col='12' className='mx-6 mt-10'>
+    <MDBContainer fluid className='overflow-hidden'>
+      <MDBRow className='d-flex justify-content-center align-items-center'>
+        <MDBCol col='12' className='mx-6 mt-4'>
           <MDBCard className='card-registration card-registration-2' style={{ borderRadius: '15px' }}>
             <MDBCardBody className='p-0 bgcol'>
               <MDBRow>
@@ -57,7 +82,7 @@ function Facultyregister() {
                   <MDBRow>
                     <MDBCol md='6'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                        wrapperClass='mb-4 autofill-group1'
                         label='First Name'
                         size='lg'
                         id='form1'
@@ -68,7 +93,7 @@ function Facultyregister() {
                     </MDBCol>
                     <MDBCol md='6'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                        wrapperClass='mb-4 autofill-group1'
                         label='Last Name'
                         size='lg'
                         id='form2'
@@ -80,7 +105,7 @@ function Facultyregister() {
                   </MDBRow>
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                    wrapperClass='mb-4 autofill-group1'
                     label='Your Email'
                     size='lg'
                     id='form8'
@@ -90,7 +115,7 @@ function Facultyregister() {
                   />
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                    wrapperClass='mb-4 autofill-group1'
                     label='Qualification'
                     size='lg'
                     id='form8'
@@ -100,7 +125,7 @@ function Facultyregister() {
                   />
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                    wrapperClass='mb-4 autofill-group1'
                     label='Position'
                     size='lg'
                     id='form3'
@@ -110,7 +135,7 @@ function Facultyregister() {
                   />
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                    wrapperClass='mb-4 autofill-group1'
                     label='Institution'
                     size='lg'
                     id='form8'
@@ -122,7 +147,7 @@ function Facultyregister() {
                   <MDBRow>
                     <MDBCol md='6'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                        wrapperClass='mb-4 autofill-group1'
                         label='Place'
                         size='lg'
                         id='form4'
@@ -159,7 +184,7 @@ function Facultyregister() {
                   <h3 className="fw-normal mb-5 text-white text-2xl font-bold" style={{ color: '#4835d4' }}>Contact Details</h3>
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                    wrapperClass='mb-4 autofill-group2' 
                     labelClass='text-white'
                     label='Address'
                     size='lg'
@@ -167,23 +192,13 @@ function Facultyregister() {
                     type='text'
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
+                    style={{ color: 'white' }}
                   />
-
-                  {/* <MDBInput
-                    wrapperClass='mb-4'
-                    labelClass='text-white'
-                    label='Additional Information'
-                    size='lg'
-                    id='form6'
-                    type='text'
-                    value={additionalInfo}
-                    onChange={(e) => setAdditionalInfo(e.target.value)}
-                  /> */}
 
                   <MDBRow>
                     <MDBCol md='5'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                          wrapperClass='mb-4 autofill-group2'
                         labelClass='text-white'
                         label='Pin Code'
                         size='lg'
@@ -191,11 +206,12 @@ function Facultyregister() {
                         type='text'
                         value={pinCode}
                         onChange={(e) => setPinCode(e.target.value)}
+                        style={{ color: 'white' }}
                       />
                     </MDBCol>
                     <MDBCol md='7'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                        wrapperClass='mb-4 autofill-group2'
                         labelClass='text-white'
                         label='District'
                         size='lg'
@@ -203,12 +219,13 @@ function Facultyregister() {
                         type='text'
                         value={district}
                         onChange={(e) => setDistrict(e.target.value)}
+                        style={{ color: 'white' }}
                       />
                     </MDBCol>
                   </MDBRow>
 
                   <MDBInput
-                    wrapperClass='mb-4'
+                     wrapperClass='mb-4 autofill-group2'
                     labelClass='text-white'
                     label='Country'
                     size='lg'
@@ -216,12 +233,13 @@ function Facultyregister() {
                     type='text'
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
+                    style={{ color: 'white' }}
                   />
 
                   <MDBRow>
                     <MDBCol md='5'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                          wrapperClass='mb-4 autofill-group2'
                         labelClass='text-white'
                         label='Code +'
                         size='lg'
@@ -229,11 +247,12 @@ function Facultyregister() {
                         type='text'
                         value={code}
                         onChange={(e) => setCode(e.target.value)}
+                        style={{ color: 'white' }}
                       />
                     </MDBCol>
                     <MDBCol md='7'>
                       <MDBInput
-                        wrapperClass='mb-4'
+                         wrapperClass='mb-4 autofill-group2'
                         labelClass='text-white'
                         label='Phone Number'
                         size='lg'
@@ -241,12 +260,26 @@ function Facultyregister() {
                         type='text'
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
+                        style={{ color: 'white' }}
                       />
                     </MDBCol>
                   </MDBRow>
 
+                  
                   <MDBInput
-                    wrapperClass='mb-4'
+                     wrapperClass='mb-4 autofill-group2'
+                    labelClass='text-white'
+                    label='Linkedin'
+                    size='lg'
+                    id='form6'
+                    type='text'
+                    value={additionalInfo}
+                    onChange={(e) => setAdditionalInfo(e.target.value)}
+                    style={{ color: 'white' }}
+                  />
+
+                  <MDBInput
+                    wrapperClass='mb-2 autofill-group2'
                     labelClass='text-white'
                     label='CV drive link'
                     size='lg'
@@ -254,7 +287,18 @@ function Facultyregister() {
                     type='text'
                     value={cvLink}
                     onChange={(e) => setCvLink(e.target.value)}
+                    style={{ color: 'white' }}
                   />
+
+                  <MDBRow className='mb-4 font-bold text-gray-900'>
+                    <ul>
+                    <li>1. Upload resume to Google Drive.</li>
+                    <li> 2. Right-click image, choose Share.</li>
+                    <li> 3. Set Anyone with the link can view.</li>
+                    <li> 4. Copy the link, paste here.</li>
+                    <li> 5. upload only file link not folder link</li>
+                    </ul>
+                  </MDBRow>
 
                   <MDBBtn color='light' size='lg' onClick={handleSubmit}>Register</MDBBtn>
                   <ToastContainer />

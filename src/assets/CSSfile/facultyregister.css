@@ -1,30 +1,35 @@
-/* body { */
-    /* fallback for old browsers */
-    /* background: #a1c4fd; */
-  
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1)); */
-  
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1)) */
-  /* } */
-  
-  .bg-indigo {
-    background-color: #0956d1;
+ .bg-indigo {
+    background-color: #0358e0;
   }
 
   .bgcol{
     box-shadow: 0px 4px 8px 6px rgb(170, 169, 169);
-
   }
 
+/* First group of fields (blue background) */
+.autofill-group1 input:-webkit-autofill,
+.autofill-group1 input:-webkit-autofill:hover,
+.autofill-group1 input:-webkit-autofill:focus {
+  border: 1px solid #4a90e2 !important;
+  -webkit-text-fill-color: rgb(0, 0, 0) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Second group of fields (green background) */
+.autofill-group2 input:-webkit-autofill,
+.autofill-group2 input:-webkit-autofill:hover,
+.autofill-group2 input:-webkit-autofill:focus {
+  border: 1px solid #0358e0 !important; /* Green border */
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0358e0 inset !important; /* Green background */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+  
   .rightside .form-outline .form-control{
-    background: #0956d1;
-  }
-  @media (min-width: 1025px) {
-    .h-custom {
-      height: 96vh !important;
-    }
+    background: #0358e0;
   }
   
   @media (min-width: 759px) {
