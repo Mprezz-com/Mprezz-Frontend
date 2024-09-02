@@ -6,3 +6,4 @@ export const host = "https://mprezz-backend-production.up.railway.app";
 export const orderProductRoute = `${host}/payments/create_order/`;
 export const orderVerifyRoute = `${host}/payments/verify/payment/`;
 export const enrollStudentRoute = `${host}/payments/createEnrollment/`;
+export const createLinkedAccount = `${host}/payments/createLinkedAccount/`

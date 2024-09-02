@@ -1,12 +1,9 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Newlogin from "./components/Newlogin"
 import Header from "./components/Header"
 import Mainpage from "./pages/Mainpage"
 import Registerpage from "./components/Registerpage"
 import Coursepage from "./pages/Coursepage"
-import Adminpage from "./components/Adminpage"
-import Instructordetails from "./pages/Instructordetails"
 import CourseForm from "./pages/CourseForm"
 import CourseCenterRegister from "./pages/CourseCenterRegister";
 import MainPageCourseCenter from "./pages/MainPageCourseCenter";
