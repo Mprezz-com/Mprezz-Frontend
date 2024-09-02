@@ -182,7 +182,7 @@ function CourseCenterRegister() {
       ifsc_code: IFSC,
       beneficiary_name: BenificiaryName,
       linked_account_id: linked_account_id,
-      product_id: product_id,
+      product_config_id: product_id,
     }
 
     if (!data.ok) {
