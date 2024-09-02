@@ -46,6 +46,8 @@ function CourseCenterRegister() {
 	const [selectedCity, setSelectedCity] = useState(null)
   const [postalCode, setPostalCode] = useState(null)
 
+  const [isAccepted, setIsAccepted] = useState(false)
+
 	//handling
 	const countryOptions = Country.getAllCountries().map((country) => ({
 		label: country.name,
@@ -62,6 +64,37 @@ function CourseCenterRegister() {
 			label: city.name,
 		})
 	)
+
+  // handling the pan code 
+  const handlingPanChange = (e) => {
+    const value = e.target.value.toUpperCase(); 
+    setPan(value);
+
+    // const panRegex = /^[a-zA-Z]{5}\d{4}[a-zA-Z]{1}$/;
+    // const validFourthChar = "CHFTBJGL";
+
+    // if (!panRegex.test(value)) {
+    //   setErrorMessage("PAN must be a 10-digit alphanumeric code.");
+    // } else if (!validFourthChar.includes(value[3])) {
+    //   setErrorMessage("The 4th digit must be one of 'C', 'H', 'F', 'A', 'T', 'B', 'J', 'G', 'L'.");
+    // } else {
+    //   setErrorMessage("");
+    // }
+
+  }
+
+  const validatePan = (value) => {
+    const panRegex = /^[a-zA-Z]{5}\d{4}[a-zA-Z]{1}$/;
+    const validFourthChar = "CHFTBJGL";
+
+    if (!panRegex.test(value)) {
+      setErrorMessage("PAN must be a 10-digit alphanumeric code.");
+    } else if (!validFourthChar.includes(value[3])) {
+      setErrorMessage("Pan Number Format is not Correct");
+    } else {
+      setErrorMessage("");
+    }
+  };
 
 	const handleArrayChange = (e, index) => {
 		const { value } = e.target
@@ -116,6 +149,8 @@ function CourseCenterRegister() {
 			setTimeout(() => setErrorMessage(""), 5000)
 			return
 		}
+
+    validatePan(pan);
     
 		const userData = {
       institution_name: institutionName,
@@ -240,6 +275,12 @@ function CourseCenterRegister() {
 		setAccount("")
 		setIFSC("")
 		setBenifeciaryName("")
+
+    if (!isAccepted) {
+			setErrorMessage("Please accept the terms and conditions.");
+			return;
+		}
+
 	}
 
 	return (
@@ -440,6 +481,7 @@ function CourseCenterRegister() {
 								placeholder="Postal_Code"
 								value={postalCode}
 								onChange={(e) => setPostalCode(e.target.value)}
+                maxLength={6}
 							/>
 						</div>
 					</div>
@@ -605,11 +647,24 @@ function CourseCenterRegister() {
 								name="pan"
 								placeholder="PAN NUMBER"
 								value={pan}
-								onChange={(e) => setPan(e.target.value)}
+								onChange={handlingPanChange}
+                maxLength={10}
 							/>
 						</div>
+            <div>
+				<input
+					type="checkbox"
+					id="terms"
+					checked={isAccepted}
+					onChange={(event) => setIsAccepted(event.target.checked)}
+				/>
+				<label htmlFor="terms">
+					I am accepting the terms and conditions
+				</label>
+			</div>
 					</div>
 				</div>
+        
 				{errorMessage && <div className="error">{errorMessage}</div>}
 				{isLoading ? (
 					<div className="shimmer-btn">
@@ -635,6 +690,7 @@ function CourseCenterRegister() {
 						Register
 					</button>
 				)}
+
 				<div className="design1">
 					<img
 						src="/src/assets/Images/frame5.jpg"
