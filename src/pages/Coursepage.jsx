@@ -49,6 +49,7 @@ function Coursepage() {
 				amount: amount,
 				currency: "INR",
 				receipt: "order_rcptid_11",
+				course_center_id:  data.institution_id
 			},{
 				headers:{'Authorization':`Bearer ${token}`}
 			})
