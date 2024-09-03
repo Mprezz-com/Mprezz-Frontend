@@ -9,6 +9,10 @@ import { Shimmer } from "react-shimmer"
 import Select from "react-select"
 import { Country, State, City } from "country-state-city"
 import { createLinkedAccount } from "../../utils/api_routes"
+import { tailspin } from 'ldrs'
+import { toast } from "react-toastify"
+tailspin.register()
+
 
 function CourseCenterRegister() {
 	const nav = useNavigate()
@@ -210,6 +214,14 @@ function CourseCenterRegister() {
     const linked_account_id = msg.linked_account_id
     const product_id = msg.product_id
 
+	
+	if (!data.ok || (!linked_account_id && !product_id)) {
+		setErrorMessage(msg["message"])
+		alert(msg["message"])
+		setIsLoading(false)
+		return
+	}
+
     const accountData = {
       business_name: BusinessName,
       business_type: BusinessType,
@@ -218,12 +230,6 @@ function CourseCenterRegister() {
       beneficiary_name: BenificiaryName,
       linked_account_id: linked_account_id,
       product_config_id: product_id,
-    }
-
-    if (!data.ok) {
-      setErrorMessage(msg["message"])
-      alert(msg["message"])
-      setIsLoading(false)
     }
 
 		try {
@@ -238,43 +244,42 @@ function CourseCenterRegister() {
 			if (!res.ok) {
 				setErrorMessage(message["message"])
 				alert(message["message"])
-        setIsLoading(false)
+				setIsLoading(false)
 				return
 			}
 
-      setIsLoading(false)
+			setIsLoading(false)
 			RemoveCookie("id", "token", "userType")
 			console.log("success", message["token"])
 			SetCookie(message["id"], message["token"], "CourseProvider")
 
-
-			nav("/")
+			toast.success("Please check your mail inbox to complete your registration!")
       
 		} catch (err) {
 			setIsLoading(false)
-      setErrorMessage(String(err))
+			setErrorMessage(String(err))
 			console.error("Error:", err)
 		}
 
-		setInstitutionName("")
-		setOwnerName("")
-		setPassword("")
-		setConfirmPassword("")
-		setInstitutionAge("")
-		setGender("")
-		setEmailId("")
-		setPhoneNumber("")
-		setAddress("")
-		setLocation("")
-		setCurrentRole("")
-		setDomain([""])
-		setOrganization("")
-		setFields("")
-		setBusinessName("")
-		setBusinessType("")
-		setAccount("")
-		setIFSC("")
-		setBenifeciaryName("")
+		// setInstitutionName("")
+		// setOwnerName("")
+		// setPassword("")
+		// setConfirmPassword("")
+		// setInstitutionAge("")
+		// setGender("")
+		// setEmailId("")
+		// setPhoneNumber("")
+		// setAddress("")
+		// setLocation("")
+		// setCurrentRole("")
+		// setDomain([""])
+		// setOrganization("")
+		// setFields("")
+		// setBusinessName("")
+		// setBusinessType("")
+		// setAccount("")
+		// setIFSC("")
+		// setBenifeciaryName("")
 
     if (!isAccepted) {
 			setErrorMessage("Please accept the terms and conditions.");
@@ -481,7 +486,7 @@ function CourseCenterRegister() {
 								placeholder="Postal_Code"
 								value={postalCode}
 								onChange={(e) => setPostalCode(e.target.value)}
-                maxLength={6}
+								maxLength={6}
 							/>
 						</div>
 					</div>
@@ -648,40 +653,31 @@ function CourseCenterRegister() {
 								placeholder="PAN NUMBER"
 								value={pan}
 								onChange={handlingPanChange}
-                maxLength={10}
+								maxLength={10}
 							/>
 						</div>
-            <div>
-				<input
-					type="checkbox"
-					id="terms"
-					checked={isAccepted}
-					onChange={(event) => setIsAccepted(event.target.checked)}
-				/>
-				<label htmlFor="terms">
-					I am accepting the terms and conditions
-				</label>
-			</div>
+						<div className="checkbox-container">
+							<input
+								type="checkbox"
+								id="terms"
+								checked={isAccepted}
+								onChange={(event) => setIsAccepted(event.target.checked)}
+							/>
+							<label htmlFor="terms">
+								I am accepting the terms and conditions
+							</label>
+						</div>
 					</div>
 				</div>
-        
+
 				{errorMessage && <div className="error">{errorMessage}</div>}
 				{isLoading ? (
-					<div className="shimmer-btn">
-						<Shimmer
-							width={270}
-							height={60}></Shimmer>
-						<h2
-							style={{
-								position: "relative",
-								top: -40,
-								color: "black",
-								zIndex: 20,
-								fontSize: 19,
-								left: 100,
-							}}>
-							Register
-						</h2>
+					<div className="submit">
+						<l-tailspin
+							size="25"
+							stroke="5"
+							speed="0.9"
+							color="white"></l-tailspin>
 					</div>
 				) : (
 					<button
