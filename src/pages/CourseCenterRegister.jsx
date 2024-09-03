@@ -253,33 +253,33 @@ function CourseCenterRegister() {
 			console.log("success", message["token"])
 			SetCookie(message["id"], message["token"], "CourseProvider")
 
+			setInstitutionName("")
+			setOwnerName("")
+			setPassword("")
+			setConfirmPassword("")
+			setInstitutionAge("")
+			setGender("")
+			setEmailId("")
+			setPhoneNumber("")
+			setAddress("")
+			setLocation("")
+			setCurrentRole("")
+			setDomain([""])
+			setOrganization("")
+			setFields("")
+			setBusinessName("")
+			setBusinessType("")
+			setAccount("")
+			setIFSC("")
+			setBenifeciaryName("")
+			
 			toast.success("Please check your mail inbox to complete your registration!")
-      
+			
 		} catch (err) {
 			setIsLoading(false)
 			setErrorMessage(String(err))
 			console.error("Error:", err)
 		}
-
-		// setInstitutionName("")
-		// setOwnerName("")
-		// setPassword("")
-		// setConfirmPassword("")
-		// setInstitutionAge("")
-		// setGender("")
-		// setEmailId("")
-		// setPhoneNumber("")
-		// setAddress("")
-		// setLocation("")
-		// setCurrentRole("")
-		// setDomain([""])
-		// setOrganization("")
-		// setFields("")
-		// setBusinessName("")
-		// setBusinessType("")
-		// setAccount("")
-		// setIFSC("")
-		// setBenifeciaryName("")
 
     if (!isAccepted) {
 			setErrorMessage("Please accept the terms and conditions.");
@@ -671,6 +671,7 @@ function CourseCenterRegister() {
 				</div>
 
 				{errorMessage && <div className="error">{errorMessage}</div>}
+
 				{isLoading ? (
 					<div className="submit">
 						<l-tailspin
