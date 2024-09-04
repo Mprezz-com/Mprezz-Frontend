@@ -101,7 +101,8 @@ function Coursepage() {
 				alert("Razorpay SDK is not loaded, are you offline?")
 			}
 		} catch (err) {
-			console.log("Error occurred", err)
+			console.log("Error occurred", err);
+			toast.warning(err.response.data.message);
 		}
 	}
 

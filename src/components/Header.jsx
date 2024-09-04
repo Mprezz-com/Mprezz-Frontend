@@ -53,7 +53,7 @@ function Header({sel}) {
         <input className = {headcss.searchbox}  type='text' placeholder='search here'
         onChange={(e) => setSearchInput(e.target.value)} onKeyUp={handleEnter}></input>
 
-        {(token==null || token==undefined)?
+        {token ?
         <div className='flex flex-row'>
 
           <div className={headcss.rightdivmain}>
@@ -91,7 +91,7 @@ function Header({sel}) {
               Sign-up
           </button>
         </div>
-      </div>:
+        </div>:
         <div className={headcss.sidehead}>
             
             {type !="CourseProvider" ?
