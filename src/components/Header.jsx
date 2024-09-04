@@ -53,7 +53,7 @@ function Header({sel}) {
         <input className = {headcss.searchbox}  type='text' placeholder='search here'
         onChange={(e) => setSearchInput(e.target.value)} onKeyUp={handleEnter}></input>
 
-        {token ?
+        {(token==undefined || token==null)?
         <div className='flex flex-row'>
 
           <div className={headcss.rightdivmain}>
