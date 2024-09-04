@@ -17,6 +17,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { Shimmer } from 'react-shimmer';
+import { Email } from '@mui/icons-material';
 
 function Newlogin() {
   const nav = useNavigate()
@@ -59,10 +60,18 @@ function Newlogin() {
   };
 
   const handleForgotPassword = async () => {
-    if (!email_id && !user_role) {
-      toast('Please fill in your email address and role properly');
+
+    if (!email_id ) {
+      toast('Please fill in your email address');
       return;
     }
+
+    if (!user_role ) {
+      toast('Please fill in your role properly');
+      return;
+    }
+
+
     var response;
 
     if(user_role == 'Student'){
@@ -75,7 +84,7 @@ function Newlogin() {
       });
     }
      else if(user_role == 'CourseProvider'){
-      response = await fetch(`${url}forgot_password_student/course_center`, {
+      response = await fetch(`${url}forgot_password_course_center/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
