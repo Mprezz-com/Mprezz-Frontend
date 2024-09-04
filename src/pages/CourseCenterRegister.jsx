@@ -119,7 +119,6 @@ function CourseCenterRegister() {
 				return;
 		}
 
-
 		console.log(
 			institutionAge,
 			institutionName,
