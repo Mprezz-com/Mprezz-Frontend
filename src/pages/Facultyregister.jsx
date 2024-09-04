@@ -70,7 +70,7 @@ function Facultyregister() {
   };
 
   return (
-    <MDBContainer fluid className='overflow-hidden'>
+    <MDBContainer fluid className='overflow-hidden pt-12'>
       <MDBRow className='d-flex justify-content-center align-items-center'>
         <MDBCol col='12' className='mx-6 mt-4'>
           <MDBCard className='card-registration card-registration-2' style={{ borderRadius: '15px' }}>

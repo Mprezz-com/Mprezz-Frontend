@@ -61,7 +61,7 @@ export default function Institutionrequest() {
     }
 
   return (
-    <div className='inreq'>
+    <div className='inreq pt-12'>
         <div className='inreqinner'>
             <div className='inreqtitle'>
             <img width={"100px"} src="https://dprakash.sirv.com/logo.jpg" alt="logo" />

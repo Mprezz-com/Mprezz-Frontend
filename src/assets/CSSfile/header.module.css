@@ -66,7 +66,16 @@
     cursor: pointer;
 }
 
+.rightdivmain{
+    display: none;
+}
+
+
 @media only screen and (max-width: 750px) {
+
+    .rightdivmain{
+        display: flex;
+    }
 
     .sidehead {
         display: flex;
@@ -97,9 +106,30 @@
         gap: 5%;
     }
 
+    .lgsgbtn{
+        display: none;
+    }
+    .rightDiv{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+        justify-content: center;
+        gap: 2px;
+        background-color: #0d6efd;
+        padding: 1px;
+        padding-left: 0px;
+        padding-right: 0px;
+        filter: brightness(1);
+        color: aliceblue;
+        box-shadow: 0px 5px 4px rgb(189, 190, 190);
+        border-radius: 5px;
+        min-width: 100px;
+    }
+
 }
 
-@media only screen and (max-width: 510px){
+/* @media only screen and (max-width: 510px){
     .lgsgbtn{
         display: none;
     }
@@ -119,4 +149,4 @@
         min-width: 140px;
     }
 
-}
+} */

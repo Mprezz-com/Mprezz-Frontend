@@ -15,7 +15,6 @@ import EmailVerification from "./pages/EmailVerification";
 import ShimmerComponent from "./shimmer/Shimmer";
 import Facultyregister from "./pages/Facultyregister";
 import Institutionrequest from "./pages/Institutionrequest";
-import NewHeadder from "./components/NewHeadder";
 import { ToastContainer } from "react-toastify";
 
 const App = ()=>{
@@ -24,7 +23,7 @@ const App = ()=>{
 			<BrowserRouter>
 				<Routes>
 					<Route
-						path="/asd"
+						path="/"
 						element={
 							<>
 								<Header />
@@ -106,10 +105,10 @@ const App = ()=>{
 						path="shimmer"
 						element={<ShimmerComponent />}></Route>
 					<Route
-						path="/"
+						path="/faculty"
 						element={
 							<>
-								<NewHeadder sel={0} />
+								<Header sel={0} />
 								<Facultyregister />
 							</>
 						}></Route>
@@ -117,7 +116,7 @@ const App = ()=>{
 						path="Institutionrequest"
 						element={
 							<>
-								<NewHeadder sel={1} />
+								<Header sel={1} />
 								<Institutionrequest />
 							</>
 						}></Route>

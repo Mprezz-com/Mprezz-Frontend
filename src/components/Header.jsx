@@ -4,12 +4,14 @@ import GetCookie from '../hooks/GetCookie';
 import RemoveCookie from '../hooks/RemoveCookie';
 import { Link, useNavigate } from 'react-router-dom';
 import 'boxicons';
+import { NavLink } from 'react-router-dom';
+
 
 // Redux
 import { useDispatch } from 'react-redux';
 import SearchOption, { setSearchContent } from '../hooks/SearchOption';
 
-function Header() {
+function Header({sel}) {
 
   const token = GetCookie('token')
   const id = GetCookie('id')
@@ -44,7 +46,7 @@ function Header() {
     <>
     <div className={headcss.header}>
     <div className={headcss.head}>
-        <img onClick={()=>nav('/')} style={{cursor:'pointer'}} width={'80px'} height={'10px'} src="https://dprakash.sirv.com/logo.jpg" alt="logo" />
+        <img onClick={()=>nav('/')} style={{cursor:'pointer'}} width={'70px'} height={'10px'} src="https://dprakash.sirv.com/logo.jpg" alt="logo" />
             
         {/* <input className = {headcss.searchbox}  type='text' placeholder='search here'></input> */}
         {/* Redux */}
@@ -52,13 +54,36 @@ function Header() {
         onChange={(e) => setSearchInput(e.target.value)} onKeyUp={handleEnter}></input>
 
         {(token==null || token==undefined)?
-        <div>
+        <div className='flex flex-row'>
+
+          <div className={headcss.rightdivmain}>
+            <div className='icon mr-3' onClick={()=>nav('/Institutionrequest')}>
+            <box-icon type='solid' size='md' name='bank' color='#304DB5'></box-icon>
+            </div>
+
+            <div className='icon mr-3' onClick={()=>nav('/faculty')}>
+            <img className='min-w-8 w-8' src="https://dprakash.sirv.com/faculty.jpg" alt="img" />
+            </div>
+
+          </div>
+          
+
           <div className={headcss.rightDiv}>
             <Link to="/login">LOGIN</Link>
             <p>/</p>
             <Link to="/IntermediateRegister">SIGN-UP</Link>
           </div>
+
           <div className={headcss.lgsgbtn}>
+
+          <button type="button" onClick={()=>{nav('/faculty')}} className={(sel==0)? 'border-b-2 border-blue-700 mr-4 font-bold':'mr-4 font-bold'}>
+              Faculty
+          </button>
+          
+          <button type="button" onClick={()=>{nav('/Institutionrequest')}} className={(sel==1)? 'border-b-2 border-blue-700 mr-4 font-bold':'mr-4 font-bold'}>
+            Institute
+          </button>
+
               <button type="button" onClick={()=>{nav('/login')}} class="btn btn-outline-primary me-2">
               Login
           </button>
