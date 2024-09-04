@@ -10,7 +10,7 @@ import Select from "react-select"
 import { Country, State, City } from "country-state-city"
 import { createLinkedAccount } from "../../utils/api_routes"
 import { tailspin } from 'ldrs'
-import { toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
 tailspin.register()
 
 
@@ -113,6 +113,13 @@ function CourseCenterRegister() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
+
+		if (!isAccepted) {
+				setErrorMessage("Please accept the terms and conditions.");
+				return;
+		}
+
+
 		console.log(
 			institutionAge,
 			institutionName,
@@ -272,20 +279,20 @@ function CourseCenterRegister() {
 			setAccount("")
 			setIFSC("")
 			setBenifeciaryName("")
-			
-			toast.success("Please check your mail inbox to complete your registration!")
+
+			toast.success(
+				"Please check your mail inbox to complete your registration!"
+			)
+
+			setTimeout(()=>{
+				nav("/login")
+			}, 3000)
 			
 		} catch (err) {
 			setIsLoading(false)
 			setErrorMessage(String(err))
 			console.error("Error:", err)
 		}
-
-    if (!isAccepted) {
-			setErrorMessage("Please accept the terms and conditions.");
-			return;
-		}
-
 	}
 
 	return (
@@ -695,6 +702,7 @@ function CourseCenterRegister() {
 					/>
 				</div>
 			</div>
+			<ToastContainer/>
 		</div>
 	)
 }
