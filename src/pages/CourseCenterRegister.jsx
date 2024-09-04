@@ -407,6 +407,8 @@ function CourseCenterRegister() {
 								placeholder="Phone Number"
 								value={phoneNumber}
 								onChange={(e) => setPhoneNumber(e.target.value)}
+								minLength={8}
+								maxLength={15}
 							/>
 						</div>
 						<div className="form-row">
@@ -418,6 +420,8 @@ function CourseCenterRegister() {
 								placeholder="Address"
 								value={address}
 								onChange={(e) => setAddress(e.target.value)}
+								minLength={10}
+								maxLength={100}
 							/>
 						</div>
 						{/* add -> street1 , loc -> street2 */}
@@ -430,6 +434,8 @@ function CourseCenterRegister() {
 								placeholder="Street2"
 								value={location}
 								onChange={(e) => setLocation(e.target.value)}
+								minLength={10}
+								maxLength={100}
 							/>
 						</div>
 
@@ -444,7 +450,7 @@ function CourseCenterRegister() {
 								value={selectedCountry}
 								onChange={(option) => {
 									setSelectedCountry(option)
-									console.log(option)
+									// console.log(option)
 									setCountryCode(option.value)
 								}}
 								className="form-control"
@@ -461,7 +467,7 @@ function CourseCenterRegister() {
 								value={selectedState}
 								onChange={(option) => {
 									setSelectedState(option)
-									console.log(option)
+									// console.log(option)
 									setStateCode(option.value)
 								}}
 								className="form-control"
@@ -478,7 +484,7 @@ function CourseCenterRegister() {
 								value={selectedCity}
 								onChange={(option) => {
 									setSelectedCity(option)
-									console.log(option)
+									// console.log(option)
 								}}
 								className="form-control"
 							/>
@@ -549,6 +555,8 @@ function CourseCenterRegister() {
 								placeholder="Business Name"
 								value={BusinessName}
 								onChange={(e) => setBusinessName(e.target.value)}
+								minLength={4}
+								maxLength={200}
 							/>
 						</div>
 						<div className="form-row">
@@ -610,6 +618,7 @@ function CourseCenterRegister() {
 								placeholder="Benificiary Name"
 								value={BenificiaryName}
 								onChange={(e) => setBenifeciaryName(e.target.value)}
+								maxLength={255}
 							/>
 						</div>
 

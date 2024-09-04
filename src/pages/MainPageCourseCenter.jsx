@@ -55,7 +55,7 @@ function MainPageCourseCenter() {
     }
     setIsLoading(false)
     console.log(value);
-    setData(value['data'])
+    setData(value['data'] || [])
   }
 
   useEffect(
@@ -282,10 +282,14 @@ function MainPageCourseCenter() {
           {
               (isLoading)?<><ShimmerComponent/> <ShimmerComponent/></>:
               
-              data.map((index)=>{
+              data.length > 0 ? (data.map((index)=>{
               console.log(index,'===========================')
               return(<CourseCard data={index} redirect={0}/>)
-            })
+            })) : (
+              <>
+              No course created.
+              </>
+            )
               
           }       
         </div>
