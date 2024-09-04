@@ -293,7 +293,7 @@ function CourseCenterRegister() {
 			<div className="formcontainer1">
 				<div className="design">
 					<img
-						src="/src/assets/Images/frame4.jpg"
+						src="https://dprakash.sirv.com/frame4.jpg"
 						alt="img"
 					/>
 				</div>
@@ -690,7 +690,7 @@ function CourseCenterRegister() {
 
 				<div className="design1">
 					<img
-						src="/src/assets/Images/frame5.jpg"
+						src="https://dprakash.sirv.com/frame5.jpg"
 						alt="img"
 					/>
 				</div>

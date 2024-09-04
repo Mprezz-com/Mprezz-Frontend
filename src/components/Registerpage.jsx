@@ -114,7 +114,7 @@ function Registerpage() {
   return (
     <div className="form-container">
       <div className='formcontainer1'>
-        <div className='design'><img src="src/assets/Images/frame4.jpg" alt="img" /></div>
+        <div className='design'><img src="https://dprakash.sirv.com/frame4.jpg" alt="img" /></div>
         <h1 className='title'>Student Registration</h1>
         <div className='personaldetails'>
           <div className='innerregister'>
@@ -307,7 +307,7 @@ function Registerpage() {
             </div>:
             <button className="submit" onClick={handlesubmit}>Register</button>
         }
-        <div className='design1'><img src="src/assets/Images/frame5.jpg" alt="img" /></div>
+        <div className='design1'><img src="https://dprakash.sirv.com/frame5.jpg" alt="img" /></div>
       </div>
       
       </div>

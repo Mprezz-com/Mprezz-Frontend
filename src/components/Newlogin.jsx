@@ -140,7 +140,7 @@ function Newlogin() {
 
         <MDBCol  className="logingradient-custom-2 flex flex-column justify-content-center h-screen d-none d-md-flex w-screen">
           <div className="text-white px-1 py-4 p-md-5 mx-md-2">
-            <img src="src/assets/Images/loginimage.png" alt="hi" />
+            <img src="https://dprakash.sirv.com/loginimage.png" alt="hi" />
           </div>
         </MDBCol>
       </MDBRow>

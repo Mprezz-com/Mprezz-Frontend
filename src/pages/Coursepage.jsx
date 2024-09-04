@@ -11,7 +11,7 @@ function Coursepage() {
   const nav = useNavigate();
   const param = useParams().id
   console.log(param)
-  const stsrc = 'https://drive.google.com/thumbnail?id=1wCNiRHwSsseOxUSqDsvWvKh_8c9dZY_g';
+  const stsrc = 'https://dprakash.sirv.com/star1.png';
   const stars = Array(5).fill(stsrc);
   const [data,setData] = useState(null)
   
@@ -116,13 +116,13 @@ function Coursepage() {
 		<div className={courseCSS.fullpage}>
 			<div className={courseCSS.titlebox}>
 				<div className={courseCSS.titlebox1}>
-					<div className={courseCSS.companypic}>
+					{/* <div className={courseCSS.companypic}>
 						<img
 							className={courseCSS.companypic1}
 							src="https://drive.google.com/thumbnail?id=1gwtQc9XweoUB9yrGjZ1H1dteE8D4rWxL"
 							alt="img"
 						/>
-					</div>
+					</div> */}
 
 					<div className={courseCSS.titright}>
 						<div className={courseCSS.ctop}>

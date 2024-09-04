@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/CSSfile/NewHeadder.css'
 
 const NewHeadder = ({sel})=>{
-    const nav = useNavigate()
+    const nav = useNavigate();
     return (
         <div className="nwh-container">
             <img onClick={()=>nav('/')} style={{cursor:'pointer'}} width={'80px'} height={'80px'} src="https://dprakash.sirv.com/logo.jpg" alt="logo" />

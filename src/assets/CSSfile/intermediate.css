@@ -39,6 +39,7 @@
 
 .irbtn h1{
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .irwelcome{

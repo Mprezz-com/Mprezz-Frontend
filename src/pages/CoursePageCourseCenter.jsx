@@ -60,7 +60,7 @@ function CoursePageCourseCenter() {
 								<span>
 									{data.start_date} - {data.end_date}
 								</span>
-								{/* <span className={courseCSS.rating}>
+								<span className={courseCSS.rating}>
 									4.4
 									<div>
 										{stars.map((star, index) => (
@@ -71,7 +71,7 @@ function CoursePageCourseCenter() {
 											/>
 										))}
 									</div>
-								</span> */}
+								</span>
 							</div>
 						</div>
 
