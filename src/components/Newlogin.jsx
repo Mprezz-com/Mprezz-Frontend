@@ -105,7 +105,7 @@ function Newlogin() {
 
         <MDBCol md='4' className="d-flex flex-column align-items-center justify-content-center mb-5">
           <div className="text-center loginlogo-container">
-            <img src="src/assets/Images/logo.jpg" alt="logo" />
+            <img src="https://dprakash.sirv.com/logo.jpg" alt="logo" />
             <h4 className="text-2xl font-bold mt-1 mb-3 pb-1">Welcome to Mprezz</h4>
           </div>
           <MDBInput wrapperClass='mb-3 logincustom-input' label='Email address' id='form1' type='email' value={email_id} onChange={(e) => setEmail(e.target.value)} />

@@ -44,7 +44,7 @@ function Header() {
     <>
     <div className={headcss.header}>
     <div className={headcss.head}>
-        <img onClick={()=>nav('/')} style={{cursor:'pointer'}} width={'80px'} height={'10px'} src="src/assets/Images/logo.jpg" alt="logo" />
+        <img onClick={()=>nav('/')} style={{cursor:'pointer'}} width={'80px'} height={'10px'} src="https://dprakash.sirv.com/logo.jpg" alt="logo" />
             
         {/* <input className = {headcss.searchbox}  type='text' placeholder='search here'></input> */}
         {/* Redux */}
