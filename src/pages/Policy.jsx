@@ -8,9 +8,9 @@ const Policy = () => {
       {/* Privacy Policy */}
       <section style={styles.section}>
         <h2 style={styles.subHeader}>Privacy Policy</h2>
-        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        {/* <p style={styles.text}><strong>Effective Date:</strong> 17/01/2025</p> */}
         <p style={styles.text}>
-          Welcome to [Website Name]. Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information. By using our services, you agree to the terms of this policy.
+          Welcome to Mprezz. Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information. By using our services, you agree to the terms of this policy.
         </p>
         <ul style={styles.list}>
           <li><strong>1. Data Collection</strong></li>
@@ -33,7 +33,7 @@ const Policy = () => {
           </p>
           <li><strong>5. User Rights</strong></li>
           <p style={styles.text}>
-            Users cannot delete or modify their data once submitted. For any concerns, please contact our support team at [Insert Contact Email/Phone].
+            Users cannot delete or modify their data once submitted. For any concerns, please contact our support team at Email: mprezz111@gmail.com.
           </p>
           <li><strong>6. Cookies</strong></li>
           <p style={styles.text}>
@@ -45,9 +45,9 @@ const Policy = () => {
       {/* Terms and Conditions */}
       <section style={styles.section}>
         <h2 style={styles.subHeader}>Terms and Conditions</h2>
-        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        {/* <p style={styles.text}><strong>Effective Date:</strong> 17/01/2025</p> */}
         <p style={styles.text}>
-          Welcome to [Website Name]. By accessing or using our platform, you agree to the following terms and conditions. Please read them carefully before proceeding.
+          Welcome to Mprezz. By accessing or using our platform, you agree to the following terms and conditions. Please read them carefully before proceeding.
         </p>
         <ul style={styles.list}>
           <li><strong>1. Service Scope</strong></li>
@@ -86,9 +86,9 @@ const Policy = () => {
       {/* Cancellation and Refund Policy */}
       <section style={styles.section}>
         <h2 style={styles.subHeader}>Cancellation and Refund Policy</h2>
-        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        {/* <p style={styles.text}><strong>Effective Date:</strong> 17/01/2025</p> */}
         <p style={styles.text}>
-          At [Website Name], we strive to provide a seamless experience for both students and course providers. Please read our cancellation and refund policy carefully before registering for a course.
+          At Mprezz, we strive to provide a seamless experience for both students and course providers. Please read our cancellation and refund policy carefully before registering for a course.
         </p>
         <ul style={styles.list}>
           <li><strong>1. Cancellation Requests</strong></li>
@@ -115,7 +115,7 @@ const Policy = () => {
       {/* Contact Us */}
       <section style={styles.section}>
         <h2 style={styles.subHeader}>Contact Us</h2>
-        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        {/* <p style={styles.text}><strong>Effective Date:</strong> 17/01/2025</p> */}
         <p style={styles.text}>
           We are here to assist you! If you have any questions or need support, feel free to reach out to us through the following channels:
         </p>

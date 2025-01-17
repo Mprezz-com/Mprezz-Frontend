@@ -681,7 +681,7 @@ function CourseCenterRegister() {
 								onChange={(event) => setIsAccepted(event.target.checked)}
 							/>
 							<label htmlFor="terms">
-								I am accepting the <Link to="/policy">Terms and Conditions</Link>
+								I am accepting the <u><b><Link to="/policy">Terms and Conditions</Link></b></u>
 							</label>
 						</div>
 					</div>
