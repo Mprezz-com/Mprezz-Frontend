@@ -1,90 +1,128 @@
-import React from 'react'
+import React from "react";
 
-function Policy() {
+const Policy = () => {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>Policies</h1>
 
-      {/* Privacy Policy Section */}
-      <section style={styles.policySection}>
-        <h2 style={styles.policyHeader}>Privacy Policy</h2>
+      {/* Privacy Policy */}
+      <section style={styles.section}>
+        <h2 style={styles.subHeader}>Privacy Policy</h2>
+        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
         <p style={styles.text}>
-          Your privacy is important to us. This privacy policy explains how we
-          collect, use, and protect your personal information.
+          Welcome to [Website Name]. Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information. By using our services, you agree to the terms of this policy.
         </p>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>1. Information We Collect</h3>
+        <ul style={styles.list}>
+          <li><strong>1. Data Collection</strong></li>
           <p style={styles.text}>
-            We may collect information such as your name, email address, and
-            other details when you interact with our services.
+            • For Students: Personal information and academic details.<br />
+            • For Course Providers: Locality information and bank account details.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>2. How We Use Your Information</h3>
+          <li><strong>2. Data Usage</strong></li>
           <p style={styles.text}>
-            The information collected is used to provide, improve, and
-            personalize our services.
+            The collected data is used exclusively for account management purposes, including facilitating seamless interaction between students and course providers.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>3. Protecting Your Information</h3>
+          <li><strong>3. Data Sharing</strong></li>
           <p style={styles.text}>
-            We implement various security measures to ensure the safety of your
-            personal information.
+            • Razorpay Integration: Bank account details of course providers are shared with Razorpay to enable payment transactions.<br />
+            • Course Enrollments: Student details are shared with course providers when students enroll in their courses.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>4. Contact Us</h3>
+          <li><strong>4. Data Security</strong></li>
           <p style={styles.text}>
-            If you have any questions about our privacy policy, please contact
-            us at privacy@example.com.
+            We store all collected data securely using cloud storage solutions to prevent unauthorized access.
           </p>
-        </div>
+          <li><strong>5. User Rights</strong></li>
+          <p style={styles.text}>
+            Users cannot delete or modify their data once submitted. For any concerns, please contact our support team at [Insert Contact Email/Phone].
+          </p>
+          <li><strong>6. Cookies</strong></li>
+          <p style={styles.text}>
+            We use cookies strictly for authorization purposes, ensuring secure access to your account.
+          </p>
+        </ul>
       </section>
 
-      {/* Payment Refund Policy Section */}
-      <section style={styles.policySection}>
-        <h2 style={styles.policyHeader}>Payment Refund Policy</h2>
+      {/* Terms and Conditions */}
+      <section style={styles.section}>
+        <h2 style={styles.subHeader}>Terms and Conditions</h2>
+        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
         <p style={styles.text}>
-          We strive to ensure customer satisfaction. This refund policy explains
-          the circumstances under which payments may be refunded.
+          Welcome to [Website Name]. By accessing or using our platform, you agree to the following terms and conditions. Please read them carefully before proceeding.
         </p>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>1. Eligibility for Refund</h3>
+        <ul style={styles.list}>
+          <li><strong>1. Service Scope</strong></li>
           <p style={styles.text}>
-            Refunds are only available for payments made within the last 30 days
-            and for services that have not been delivered as promised.
+            [Website Name] serves as a platform connecting students and course providers. Students can browse and register for courses offered by verified course providers through our website.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>2. Requesting a Refund</h3>
+          <li><strong>2. Eligibility</strong></li>
           <p style={styles.text}>
-            To request a refund, please contact us at refunds@example.com with
-            your order details and the reason for the request.
+            There are no specific eligibility restrictions for students or course providers to use our platform.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>3. Refund Processing Time</h3>
+          <li><strong>3. User Obligations</strong></li>
           <p style={styles.text}>
-            Approved refunds will be processed within 7-10 business days and
-            credited to the original payment method.
+            • All course listings provided by course centers must be authentic and valid.<br />
+            • Users are responsible for providing accurate and up-to-date information during registration and usage of the platform.<br />
+            • Misuse of the platform or violation of these terms may result in account suspension or termination.
           </p>
-        </div>
-
-        <div style={styles.subSection}>
-          <h3 style={styles.subHeader}>4. Non-Refundable Cases</h3>
+          <li><strong>4. Payment Terms</strong></li>
           <p style={styles.text}>
-            Payments for completed services or custom work are non-refundable
-            unless otherwise specified.
+            All payment transactions are handled through integrated third-party services. No additional rules for fees or commissions apply beyond those stipulated by payment gateways.
           </p>
-        </div>
+          <li><strong>5. Account Termination</strong></li>
+          <p style={styles.text}>
+            We reserve the right to suspend or terminate user accounts at our discretion based on circumstances, including but not limited to fraudulent activities, misuse of the platform, or violation of these terms.
+          </p>
+          <li><strong>6. Dispute Resolution</strong></li>
+          <p style={styles.text}>
+            All disputes related to the use of our platform will be resolved at our sole discretion based on the circumstances.
+          </p>
+          <li><strong>7. Liability Disclaimer</strong></li>
+          <p style={styles.text}>
+            [Website Name] does not guarantee the accuracy, validity, or quality of courses listed by course providers. We act solely as a facilitator and are not responsible for the content or outcome of any course.
+          </p>
+        </ul>
+      </section>
+
+      {/* Cancellation and Refund Policy */}
+      <section style={styles.section}>
+        <h2 style={styles.subHeader}>Cancellation and Refund Policy</h2>
+        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        <p style={styles.text}>
+          At [Website Name], we strive to provide a seamless experience for both students and course providers. Please read our cancellation and refund policy carefully before registering for a course.
+        </p>
+        <ul style={styles.list}>
+          <li><strong>1. Cancellation Requests</strong></li>
+          <p style={styles.text}>Cancellations are not allowed once a course registration has been completed.</p>
+          <li><strong>2. Refund Eligibility</strong></li>
+          <p style={styles.text}>
+            Refunds are generally not provided. However, in exceptional cases where users contact us with a valid reason, and the course provider agrees to the refund, we may consider processing the request.
+          </p>
+          <li><strong>3. Refund Processing</strong></li>
+          <p style={styles.text}>
+            Refunds, if approved, will be processed based on the circumstances of the request. The timeline for processing will be communicated individually.
+          </p>
+          <li><strong>4. Non-Refundable Scenarios</strong></li>
+          <p style={styles.text}>
+            Refunds will not be provided under the following conditions:<br />
+            • If the course is already in progress.<br />
+            • If the course has been completed.
+          </p>
+          <li><strong>5. Contact for Cancellation and Refund Requests</strong></li>
+          <p style={styles.text}>For any queries related to cancellations or refunds, please contact us at mprezz111@gmail.com.</p>
+        </ul>
+      </section>
+
+      {/* Contact Us */}
+      <section style={styles.section}>
+        <h2 style={styles.subHeader}>Contact Us</h2>
+        <p style={styles.text}><strong>Effective Date:</strong> [Insert Date]</p>
+        <p style={styles.text}>
+          We are here to assist you! If you have any questions or need support, feel free to reach out to us through the following channels:
+        </p>
+        <p style={styles.text}><strong>Primary Contact Email:</strong></p>
+        <p style={styles.text}>Email: mprezz111@gmail.com</p>
+        <p style={styles.text}><strong>Operating Hours:</strong></p>
+        <p style={styles.text}>Monday to Friday: 9:00 AM to 6:00 PM IST</p>
       </section>
     </div>
   );
@@ -92,44 +130,37 @@ function Policy() {
 
 const styles = {
   container: {
-    backgroundColor: "#e6f7ff",
-    color: "#003366",
     fontFamily: "Arial, sans-serif",
+    color: "#003366",
+    backgroundColor: "#f7f9fc",
     padding: "20px",
-    borderRadius: "8px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    maxWidth: "800px",
-    margin: "20px auto",
+    maxWidth: "900px",
+    margin: "0 auto",
   },
   header: {
-    color: "#00509e",
     fontSize: "2.5rem",
     textAlign: "center",
-    marginBottom: "30px",
+    marginBottom: "20px",
+    color: "#00509e",
   },
-  policySection: {
+  section: {
     marginBottom: "30px",
-  },
-  policyHeader: {
-    color: "#004080",
-    fontSize: "2rem",
-    marginBottom: "15px",
-    borderBottom: "2px solid #00509e",
-    paddingBottom: "5px",
   },
   subHeader: {
-    color: "#003366",
-    fontSize: "1.25rem",
-    margin: "15px 0",
+    fontSize: "1.8rem",
+    color: "#004080",
+    marginBottom: "15px",
   },
   text: {
     fontSize: "1rem",
     lineHeight: "1.6",
-    color: "#003366",
+    marginBottom: "10px",
   },
-  subSection: {
-    marginBottom: "20px",
+  list: {
+    listStyleType: "disc",
+    marginLeft: "20px",
+    marginBottom: "10px",
   },
 };
 
-export default Policy
+export default Policy;
