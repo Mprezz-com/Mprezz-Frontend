@@ -16,6 +16,7 @@ import ShimmerComponent from "./shimmer/Shimmer";
 import Facultyregister from "./pages/Facultyregister";
 import Institutionrequest from "./pages/Institutionrequest";
 import { ToastContainer } from "react-toastify";
+import Policy from "./pages/Policy";
 
 const App = ()=>{
   return (
@@ -26,8 +27,8 @@ const App = ()=>{
 						path="/"
 						element={
 							<>
-								<Header />
-								<Mainpage />
+							<Header />
+							<Mainpage />
 							</>
 						}></Route>
 					<Route
@@ -35,7 +36,12 @@ const App = ()=>{
 						element={<IntermediateRegister />}></Route>
 					<Route
 						path="register"
-						element={<Registerpage />}></Route>
+						element={<Registerpage />}>
+					</Route>
+					<Route
+						path="policy"
+						element={<Policy/>}>
+					</Route>
 					<Route
 						path="EmailVerification"
 						element={<EmailVerification />}></Route>
