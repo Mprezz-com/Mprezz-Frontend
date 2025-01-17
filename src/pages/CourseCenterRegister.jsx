@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom"
 import RemoveCookie from "../hooks/RemoveCookie"
 import SetCookie from "../hooks/setcookie"
 import { Shimmer } from "react-shimmer"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Policy from "./Policy";
 
 import Select from "react-select"
 import { Country, State, City } from "country-state-city"
