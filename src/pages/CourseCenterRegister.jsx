@@ -90,13 +90,10 @@ function CourseCenterRegister() {
   }
 
   const validatePan = (value) => {
-    const panRegex = /^[a-zA-Z]{5}\d{4}[a-zA-Z]{1}$/;
-    const validFourthChar = "CHFTBJGL";
+    const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
 
     if (!panRegex.test(value)) {
       setErrorMessage("PAN must be a 10-digit alphanumeric code.");
-    } else if (!validFourthChar.includes(value[3])) {
-      setErrorMessage("Pan Number Format is not Correct");
     } else {
       setErrorMessage("");
     }
