@@ -1,5 +1,5 @@
 // export const host = "https://mprezz-backend.onrender.com"
-export const host = "https://mprezz-backend-z598.onrender.com/";
+export const host = "https://mprezz-backend-z598.onrender.com";
 // export const host = 'http://localhost:8000'
 // const host = process.env.BACKEND_API;
 
